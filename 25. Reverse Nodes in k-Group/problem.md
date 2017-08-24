@@ -6,7 +6,7 @@ You may not alter the values in the nodes, only nodes itself may be changed.
 
 For example,
 
-Given this linked list : <font color=#c7254e>`1->2->3->4->5`</font>
+Given this linked list : `1->2->3->4->5`
 
 For k = 2, you should return : <font color=#c7254e>`2->1->4->3->5`</font>
 
