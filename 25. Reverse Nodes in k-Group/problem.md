@@ -6,8 +6,8 @@ You may not alter the values in the nodes, only nodes itself may be changed.
 
 For example,
 
-Given this linked list : `1->2->3->4->5`
+Given this linked list : <span style="color:#c7254e">`1->2->3->4->5`</span>
 
-For k = 2, you should return : <font color=#c7254e>`2->1->4->3->5`</font>
+For k = 2, you should return : <span style="color:#c7254e">`2->1->4->3->5`</span>
 
-For k = 3, you should return : <font color=#c7254e>`3->2->1->4->5`</font>
+For k = 3, you should return : <span style="color:#c7254e">`3->2->1->4->5`</span>
