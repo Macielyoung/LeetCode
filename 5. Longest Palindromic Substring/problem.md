@@ -2,9 +2,11 @@ Given a string `s`, find the longest palindromic substring in `s`. You may assum
 
 Example 1 :
 
+```cpp
 `Input` : "babad"
 
 `Output` : "bab"
+```
 
 Example 2 :
 
