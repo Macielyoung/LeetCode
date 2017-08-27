@@ -2,14 +2,16 @@ Given a string `s`, find the longest palindromic substring in `s`. You may assum
 
 Example 1 :
 
-```cpp
-`Input` : "babad"
+```
+Input : "babad"
 
-`Output` : "bab"
+Output : "bab"
 ```
 
 Example 2 :
 
+```
 `Input` : "cbbd"
 
 `Output` : "bb"
+```
