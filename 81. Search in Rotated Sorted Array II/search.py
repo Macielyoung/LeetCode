@@ -1,6 +1,4 @@
 #-*- coding: UTF-8 -*-
-import sys
-sys.setrecursionlimit(10000000)
 
 class Solution:
     def search(self, nums, target):
