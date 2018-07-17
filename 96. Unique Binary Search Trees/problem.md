@@ -33,6 +33,6 @@ Given n = 3, there are a total of 5 unique BST's:
         + dp[1] * dp[1]      (2为根的情况)
         + dp[2] * dp[0]      (3为根的情况) 
   ...
-  dp[n+1] = $\sum_{i=0}^n$ dp[i]*dp[n-i]    for n>=0
+  dp[n+1] = `\sum_{i=0}^n`dp[i]*dp[n-i]    for n>=0
   ```
 
