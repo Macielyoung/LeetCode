@@ -23,7 +23,6 @@ class Solution:
         return left == right
 
 
-
 if __name__ == '__main__':
     solu = Solution()
     A = TreeNode(1)
