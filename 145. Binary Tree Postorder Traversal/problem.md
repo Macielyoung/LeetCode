@@ -1,0 +1,25 @@
+## Problem
+
+Given a binary tree, return the *postorder* traversal of its nodes' values.
+
+**Example:**
+
+```
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+
+Output: [3,2,1]
+```
+
+**Follow up:** Recursive solution is trivial, could you do it iteratively?
+
+
+
+## Solution
+
+* 递归实现。
+* 迭代实现。后序是左右中的顺序，我们使用中右左的顺序来遍历二叉树，最终在反转列表即可。
