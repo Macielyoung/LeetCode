@@ -23,4 +23,4 @@ python中的对象之间赋值时是按照引用传递的。
 * 其次，把当前节点的随机指针指向节点的后一个节点赋给当前节点后一个节点的随机指针（复制节点的random指针）；
 * 最后，把复制的节点从原链表中剥离开。
 
-![copyRandom](D:\GitProject\LeetCode\138. Copy List with Random Pointer\copyRandom.jpg)
+![copyRandom](https://github.com/Macielyoung/LeetCode/blob/master/138.%20Copy%20List%20with%20Random%20Pointer/copyRandom.jpg)
