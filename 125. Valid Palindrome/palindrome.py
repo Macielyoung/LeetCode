@@ -1,5 +1,4 @@
 #-*- coding: UTF-8 -*-
-import re
 
 class Solution(object):
     def isPalindrome(self, s):
