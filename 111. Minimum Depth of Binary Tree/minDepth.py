@@ -1,5 +1,6 @@
 #-*- coding: UTF-8 -*-
 from collections import deque
+import sys
 
 class TreeNode:
     def __init__(self, x):
@@ -27,6 +28,24 @@ class Solution:
         d, D = sorted(map(self.minDepth, (root.left, root.right)))
         return 1 + (d or D)
 
+    def minDepth3(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if not root: return 0
+        if(root.left==None and root.right==None): return 1
+        left, right = 0, 0
+        if(root.left != None):
+            left = self.minDepth3(root.left)
+        else:
+            left = sys.maxsize
+        if (root.right != None):
+            right = self.minDepth3(root.right)
+        else:
+            right = sys.maxsize
+        return min(left, right) + 1
+
 if __name__ == '__main__':
     solu = Solution()
     A = TreeNode(3)
@@ -40,6 +59,8 @@ if __name__ == '__main__':
     C.left = D
     C.right = E
     # B.left = F
-    height = solu.minDepth(A)
-    height2 = solu.minDepth2(A)
-    print height, height2
+    # height = solu.minDepth(A)
+    # height2 = solu.minDepth2(A)
+    height3 = solu.minDepth3(A)
+    # print(height, height2, height3)
+    print(height3)
