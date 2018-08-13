@@ -53,8 +53,6 @@ class Solution:
             ans.append(res)
         return ans
 
-
-
 if __name__ == '__main__':
     solu = Solution()
     A = TreeNode(3)
