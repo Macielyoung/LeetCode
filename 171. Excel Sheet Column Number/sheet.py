@@ -26,7 +26,7 @@ class Solution(object):
 
 if __name__ == '__main__':
     solu = Solution()
-    s = 'ZY'
+    s = 'ZYYY'
     res = solu.titleToNumber(s)
     res2 = solu.titleToNumber2(s)
     print(res, res2)
