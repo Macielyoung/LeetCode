@@ -1,4 +1,5 @@
 #-*- coding: UTF-8 -*-
+from collections import deque
 
 class TreeLinkNode:
     def __init__(self, x):
@@ -34,15 +35,38 @@ class Solution:
     def connect2(self, root):
         if root == None:
             return
-        pre, cur = root, None
-        while(pre.left):
-            cur = pre
-            while(cur):
-                cur.left.next = cur.right
-                if(cur.next):
-                    cur.right.next = cur.next.left
-                cur = cur.next
-            pre = pre.left
+        queue, level, cur = root, None, None
+        while queue:
+            if queue.left:
+                if not level:
+                    level = cur = queue.left
+                else:
+                    cur.next = queue.left
+                    cur = cur.next
+            if queue.right:
+                if not level:
+                    level = cur = queue.right
+                else:
+                    cur.next = queue.right
+                    cur = cur.next
+            queue = queue.next
+            if not queue and level:
+                queue, level, curr = level, None, None
+
+    def connect3(self, root):
+        if root == None:
+            return
+        queue, level = deque([root]), deque()
+        while queue:
+            node = queue.popleft()
+            if node.left:
+                level.append(node.left)
+            if node.right:
+                level.append(node.right)
+            node.next = queue[0] if queue else None
+            if not queue and level:
+                queue, level = level, queue
+
 
 if __name__ == '__main__':
     solu = Solution()
@@ -59,6 +83,6 @@ if __name__ == '__main__':
     B.right = E
     # C.left = F
     C.right = G
-    dic = solu.connect(A)
-    # solu.connect2(A)
+    # dic = solu.connect(A)
+    solu.connect3(A)
     print(A.left.right.next.val)
