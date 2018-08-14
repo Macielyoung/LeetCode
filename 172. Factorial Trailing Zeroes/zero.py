@@ -1,5 +1,4 @@
 #-*- coding: UTF-8 -*-
-import math
 
 class Solution(object):
     def trailingZeroes(self, n):
