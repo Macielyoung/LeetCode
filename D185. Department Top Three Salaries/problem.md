@@ -44,3 +44,13 @@ Write a SQL query to find employees who earn the top three salaries in each of t
 
 ## Solution
 
+查询每个部门工资最高的三位员工。
+
+查询的工资比部门员工工资高的人员不超过三位，同时是同一个部门的。
+
+```
+select d.Name as Department, e.Name as Employee, e.Salary as Salary from Employee e join Department d
+on e.DepartmentId = d.Id
+where (select count(distinct Salary) from Employee where Salary > e.Salary and d.Id = DepartmentId) < 3
+order by d.Name, e.Salary desc
+```
