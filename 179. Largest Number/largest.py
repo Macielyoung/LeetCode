@@ -10,6 +10,8 @@ class Solution(object):
         nums = [str(i) for i in nums]
         comp = lambda a,b : 1 if a+b>b+a else -1 if a+b<b+a else 0
         nums.sort(key=functools.cmp_to_key(comp), reverse=True)
+        if nums and nums[0] == '0':
+            return '0'
         return "".join(nums)
 
     def largestNumber2(self, nums):
