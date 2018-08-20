@@ -1,5 +1,4 @@
 #-*- coding: UTF-8 -*-
-import re
 
 class Solution:
     def compareVersion(self, version1, version2):
