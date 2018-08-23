@@ -36,3 +36,23 @@ Explanation: There are a total of 2 courses to take.
 
 * 开始想法是根据关联边，把所有课程构建成一个链表，看看链表是否存在环，如果有，则不能完成。结果发现一个课程可是是多个课程的预学课，所以这个方法是行不通的。
 * 判断图中是否有环，使用dfs或bfs遍历，如果每个点存在环，就不能完成课程，如果都没有，则可以完成课程。
+
+```
+判断图中是否有环，深度优先遍历：
+def dfs(node, graph, visited, stack):
+    visited[node] = True
+    stack.append(node)
+    if node in graph:
+        for n in graph[node]:
+            if n not in stack:
+                if not visited[n]:
+                    dfs(n, graph, visited, stack)
+            else:
+                index = stack.index(n)
+                print 'Circle: ',
+                for i in stack[index:]:
+                    print i,
+                print n
+    stack.pop(-1)
+```
+
