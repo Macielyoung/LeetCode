@@ -13,7 +13,6 @@ class Solution:
         else:
             return True
 
-
 if __name__ == '__main__':
     solu = Solution()
     nums = [1,1,1,3,3,4,3,2,4,2]
