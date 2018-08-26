@@ -27,8 +27,11 @@ class Solution(object):
                 if(nums[i]>nums[i-1] and nums[i]>nums[i+1]):
                     return i
 
+    def findPeakElement2(self, nums):
+        return nums.index(max(nums))
+
 if __name__ == '__main__':
     solu = Solution()
     nums = [1,2,3]
-    res = solu.findPeakElement(nums)
+    res = solu.findPeakElement2(nums)
     print(res)
