@@ -28,7 +28,7 @@ class Solution:
                     string += str(nums[i])
                     res.append(string)
         return res
-        
+
 if __name__ == '__main__':
     solu = Solution()
     nums1 = [0,1,2,4,5,7]
