@@ -16,5 +16,6 @@ class Solution(object):
 if __name__ == '__main__':
     solu = Solution()
     citations = [3,0,6,1,5]
-    res = solu.hIndex(citations)
+    citations2 = [3, 3, 5, 8, 25]
+    res = solu.hIndex(citations2)
     print(res)
