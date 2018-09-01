@@ -51,9 +51,33 @@ class Solution:
             else:
                 high = j
 
+    # O(1)空间复杂度，且不能改变原数组
+    def findKthLargest4(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        minv, maxv = min(nums), max(nums)
+        while(minv <= maxv):
+            mid = (minv+maxv)//2
+            count1 = count2 = 0
+            for val in nums:
+                if(val >= mid):
+                    count1 += 1
+                if(val > mid):
+                    count2 += 1
+            if(count1>=k and count2<k):
+                return mid
+            if(count1<k):
+                maxv = mid - 1
+            else:
+                minv = mid + 1
+        return -1
+
 if __name__ == '__main__':
     solu = Solution()
     nums = [3,2,1,5,6,4,10,9,7]
-    k = 5
-    res = solu.findKthLargest3(nums, k)
+    k = 3
+    res = solu.findKthLargest4(nums, k)
     print(res)
