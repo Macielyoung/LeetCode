@@ -18,8 +18,20 @@ class Solution:
             else:
                 i += 1
 
+    def moveZeroes2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        lastZero = 0
+        for i in range(len(nums)):
+            if(nums[i]!=0):
+                nums[lastZero], nums[i] = nums[i], nums[lastZero]
+                lastZero += 1
+
+
 if __name__ == '__main__':
     solu = Solution()
-    nums = [0,1,0,3,12]
-    solu.moveZeroes(nums)
+    nums = [3, 4, 0, 6, 10, 3, 0, 12, 0, 0, 21, 44, 21, 0, 15]
+    solu.moveZeroes2(nums)
     print(nums)
