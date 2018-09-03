@@ -17,7 +17,8 @@ class Solution:
                 n -= 1
             else:
                 i += 1
-
+    
+    # Space: O(1)  Time: O(n)
     def moveZeroes2(self, nums):
         """
         :type nums: List[int]
