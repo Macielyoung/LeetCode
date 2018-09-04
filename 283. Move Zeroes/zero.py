@@ -29,7 +29,6 @@ class Solution:
                 nums[lastZero], nums[i] = nums[i], nums[lastZero]
                 lastZero += 1
 
-
 if __name__ == '__main__':
     solu = Solution()
     nums = [3, 4, 0, 6, 10, 3, 0, 12, 0, 0, 21, 44, 21, 0, 15]
