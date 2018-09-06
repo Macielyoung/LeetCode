@@ -1,5 +1,4 @@
 #-*- coding: UTF-8 -*-
-from collections import Counter
 
 class Solution:
     # 时间复杂度O(n*sizeof(integer))
@@ -27,7 +26,6 @@ class Solution:
         res = [0]
         while len(res) < num + 1:
             res += [i + 1 for i in res]
-
         return res[:num + 1]
 
 
