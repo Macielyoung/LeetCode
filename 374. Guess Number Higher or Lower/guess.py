@@ -37,22 +37,32 @@ class Solution(object):
         return -1
 
     # Ternary Search
+    # Time:O(log_3^n)  Space:O(1)
     def guessNumber2(self, n):
         """
         :type n: int
         :rtype: int
         """
-    low, high = 1, n
-    while (low <= high):
-        three1 = low + (high-low)/3
-        three2 = high - (high-low)/3
-        res1, res2 = self.guess(three1), self.guess(three2)
-        if(res1==0):
-            return three1
-        
+        low, high = 1, n
+        while (low <= high):
+            three1 = low + (high-low)/3
+            three2 = high - (high-low)/3
+            res1, res2 = self.guess(three1), self.guess(three2)
+            if(res1==0):
+                return three1
+            if(res2==0):
+                return three2
+            if(res2 == 1):
+                low = three2 + 1
+            elif(res1 == -1):
+                high = three1 - 1
+            else:
+                low = three1 + 1
+                high = three2 - 1
+        return -1
 
 if __name__ == '__main__':
     solu = Solution()
     n = 20
-    res = solu.guessNumber(n)
+    res = solu.guessNumber2(n)
     print(res)
