@@ -65,6 +65,7 @@ class Solution(object):
         """
         return 1 if n == 1 else 2 * (1 + n / 2 - self.lastRemaining4(n / 2))
 
+    # 迭代
     def lastRemaining5(self, n):
         """
         :type n: int
