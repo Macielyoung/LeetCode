@@ -44,14 +44,6 @@ class Solution(object):
     #     :type k: int
     #     :rtype: List[List[int]]
     #     """
-    #     if k==0:
-    #         return []
-    #     res = []
-    #     m, n = len(nums1), len(nums2)
-    #     i, j = 0, 0
-    #     while(k>0):
-    #         res.append([nums1[i], nums2[j]])
-    #         k -= 1
 
 if __name__ == '__main__':
     solu = Solution()
