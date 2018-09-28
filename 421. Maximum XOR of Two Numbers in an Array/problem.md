@@ -20,4 +20,5 @@ Explanation: The maximum result is 5 ^ 25 = 28.
 
 ## Solution
 
-* 
+* 直接两层循环，超时
+* 使用bit位做异或
